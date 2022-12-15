@@ -7,13 +7,6 @@ import {useParams} from 'react-router-dom'
 // Set the save interval to 2 seconds
 const SAVE_INTERVAL_MS = 2000
 
-// Toolbar options for the editor
-const TOOLBAR_OPTIONS = [
-    [{header: [1, 2, 3, false]}],
-    ["bold", "italic", "underline"],
-    ["clean"],
-]
-
 export default function TextEditor() {
     // Get the 'id' parameter from the URL and store it in 'documentId'
     const {id: documentId} = useParams()
@@ -110,7 +103,7 @@ export default function TextEditor() {
         wrapper.append(editor)
 
         // Create a new Quill editor instance, passing the editor div and a configuration object as arguments
-        const q = new Quill(editor, { theme: "snow", modules: {toolbar: TOOLBAR_OPTIONS }})
+        const q = new Quill(editor, { theme: "snow", modules: {toolbar: false }})
 
         // Disable the editor to prevent the user from making changes until it is fully loaded and ready
         q.disable()

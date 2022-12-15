@@ -33,6 +33,14 @@ body {
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, .5);
 }
 
+.heading {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    font-family: "Courier New";
+    text-shadow: 2px 2px 2px gray;
+}
+
 @page {
     margin: 1in;
 }
@@ -55,3 +63,5 @@ body {
         display: none;
     }
 }
+
+
